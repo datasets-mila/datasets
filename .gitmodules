@@ -4,3 +4,6 @@
 [submodule "mnist"]
 	path = mnist
 	url = ./mnist
+[submodule "icentia11k"]
+	path = icentia11k
+	url = ./icentia11k
