@@ -7,3 +7,6 @@
 [submodule "icentia11k"]
 	path = icentia11k
 	url = ./icentia11k
+[submodule "imagenet"]
+	path = imagenet
+	url = ./imagenet
