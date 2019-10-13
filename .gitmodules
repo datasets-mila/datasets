@@ -1,15 +1,9 @@
-[submodule "cifar10"]
-	path = cifar10
-	url = ./cifar10
 [submodule "mnist"]
 	path = mnist
 	url = ./mnist
 [submodule "icentia11k"]
 	path = icentia11k
 	url = ./icentia11k
-[submodule "imagenet"]
-	path = imagenet
-	url = ./imagenet
 [submodule "cifar100"]
 	path = cifar100
 	url = ./cifar100
