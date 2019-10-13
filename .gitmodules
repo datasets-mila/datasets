@@ -7,3 +7,6 @@
 [submodule "cifar100"]
 	path = cifar100
 	url = ./cifar100
+[submodule "cifar10"]
+	path = cifar10
+	url = ./cifar10
