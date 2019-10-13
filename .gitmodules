@@ -10,3 +10,6 @@
 [submodule "imagenet"]
 	path = imagenet
 	url = ./imagenet
+[submodule "cifar100"]
+	path = cifar100
+	url = ./cifar100
