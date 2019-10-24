@@ -13,3 +13,6 @@
 [submodule "cifar10"]
 	path = cifar10
 	url = ./cifar10
+[submodule "scannet"]
+	path = scannet
+	url = ./scannet
