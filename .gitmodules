@@ -16,3 +16,6 @@
 [submodule "scannet"]
 	path = scannet
 	url = ./scannet
+[submodule "convai2"]
+	path = convai2
+	url = ./convai2
