@@ -19,3 +19,6 @@
 [submodule "convai2"]
 	path = convai2
 	url = ./convai2
+[submodule "personachat"]
+	path = personachat
+	url = ./personachat
