@@ -15,7 +15,10 @@
 	url = ./cifar10
 [submodule "scannet"]
 	path = restricted/scannet_users/scannet
-	url = ./scannet
+	url = ./restricted/scannet_users/scannet
+[submodule "scannet_extract"]
+	path = restricted/scannet_users/scannet.var/scannet_extract
+	url = ./restricted/scannet_users/scannet.var/scannet_extract
 [submodule "convai2"]
 	path = convai2
 	url = ./convai2
