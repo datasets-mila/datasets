@@ -34,3 +34,6 @@
 [submodule "perturbseq/perturbseq_2019"]
 	path = perturbseq/perturbseq_2019
 	url = ./perturbseq/perturbseq_2019
+[submodule "lincs_l1000/lincs_l1000_phase_i"]
+	path = lincs_l1000/lincs_l1000_phase_i
+	url = ./lincs_l1000/lincs_l1000_phase_i
