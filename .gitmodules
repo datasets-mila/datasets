@@ -28,3 +28,6 @@
 [submodule ".dataset_template"]
 	path = .dataset_template
 	url = ./.dataset_template
+[submodule "perturbseq/perturbseq_2016"]
+	path = perturbseq/perturbseq_2016
+	url = ./perturbseq/perturbseq_2016
