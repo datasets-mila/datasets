@@ -31,3 +31,6 @@
 [submodule "perturbseq/perturbseq_2016"]
 	path = perturbseq/perturbseq_2016
 	url = ./perturbseq/perturbseq_2016
+[submodule "perturbseq/perturbseq_2019"]
+	path = perturbseq/perturbseq_2019
+	url = ./perturbseq/perturbseq_2019
