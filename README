@@ -1,0 +1,17 @@
+Please fill this form to request a new dataset or a dataset to be migrated:
+https://docs.google.com/forms/d/e/1FAIpQLSf3XyKpvMaIHV2MaDBbFIVJCCcWLpo2HTjkQ94f-ebMRpY97Q/viewform?usp=sf_link
+
+In the quest to better manage datasets used at Mila, we have set aside a new volume with greater capacity to host your datasets (/network/datasets).
+This volume will be managed, meaning that write access to the volume is reserved to dedicated personnel. We therefore ask you to declare any datasets
+you feel you need through this form : https://docs.google.com/forms/d/e/1FAIpQLSf3XyKpvMaIHV2MaDBbFIVJCCcWLpo2HTjkQ94f-ebMRpY97Q/viewform?usp=sf_link.
+One form should be filled per needed dataset. Alternatively, you can also send a mail to helpdesk@mila.quebec who will ask you to fill in the form and
+follow up on the process.
+
+Amongst the objectives for this initiative are:
+
+- Ensure immutability of given datasets
+- Duplication management
+- Provenance tracking
+- Cleanup of doubtfully useful datasets
+- More space for more datasets
+- Tighter integration with batch scheduling tools and distribution throughout Mila accessible clusters.
