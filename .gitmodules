@@ -61,3 +61,6 @@
 [submodule "perturbseq/perturbseq_2016.var/perturbseq_2016_extract"]
 	path = perturbseq/perturbseq_2016.var/perturbseq_2016_extract
 	url = ./perturbseq/perturbseq_2016.var/perturbseq_2016_extract
+[submodule "perturbseq/perturbseq_2019.var/perturbseq_2019_extract"]
+	path = perturbseq/perturbseq_2019.var/perturbseq_2019_extract
+	url = ./perturbseq/perturbseq_2019.var/perturbseq_2019_extract
