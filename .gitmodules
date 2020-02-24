@@ -55,3 +55,6 @@
 [submodule "lincs_l1000/lincs_l1000_phase_i.var/lincs_l1000_phase_i_extract"]
 	path = lincs_l1000/lincs_l1000_phase_i.var/lincs_l1000_phase_i_extract
 	url = ./lincs_l1000/lincs_l1000_phase_i.var/lincs_l1000_phase_i_extract
+[submodule "lincs_l1000/lincs_l1000_phase_ii.var/lincs_l1000_phase_ii_extract"]
+	path = lincs_l1000/lincs_l1000_phase_ii.var/lincs_l1000_phase_ii_extract
+	url = ./lincs_l1000/lincs_l1000_phase_ii.var/lincs_l1000_phase_ii_extract
