@@ -40,27 +40,3 @@
 [submodule "lincs_l1000/lincs_l1000_phase_ii"]
 	path = lincs_l1000/lincs_l1000_phase_ii
 	url = ./lincs_l1000/lincs_l1000_phase_ii
-[submodule "lincs_l1000_phase_i_extract"]
-	path = lincs_l1000_phase_i_extract
-	url = ./lincs_l1000_phase_i_extract
-[submodule "lincs_l1000_phase_ii_extract"]
-	path = lincs_l1000_phase_ii_extract
-	url = ./lincs_l1000_phase_ii_extract
-[submodule "lincs_l1000_phase_ii.var_extract"]
-	path = lincs_l1000_phase_ii.var_extract
-	url = ./lincs_l1000_phase_ii.var_extract
-[submodule "lincs_l1000_phase_i.var_extract"]
-	path = lincs_l1000_phase_i.var_extract
-	url = ./lincs_l1000_phase_i.var_extract
-[submodule "lincs_l1000/lincs_l1000_phase_i.var/lincs_l1000_phase_i_extract"]
-	path = lincs_l1000/lincs_l1000_phase_i.var/lincs_l1000_phase_i_extract
-	url = ./lincs_l1000/lincs_l1000_phase_i.var/lincs_l1000_phase_i_extract
-[submodule "lincs_l1000/lincs_l1000_phase_ii.var/lincs_l1000_phase_ii_extract"]
-	path = lincs_l1000/lincs_l1000_phase_ii.var/lincs_l1000_phase_ii_extract
-	url = ./lincs_l1000/lincs_l1000_phase_ii.var/lincs_l1000_phase_ii_extract
-[submodule "perturbseq/perturbseq_2016.var/perturbseq_2016_extract"]
-	path = perturbseq/perturbseq_2016.var/perturbseq_2016_extract
-	url = ./perturbseq/perturbseq_2016.var/perturbseq_2016_extract
-[submodule "perturbseq/perturbseq_2019.var/perturbseq_2019_extract"]
-	path = perturbseq/perturbseq_2019.var/perturbseq_2019_extract
-	url = ./perturbseq/perturbseq_2019.var/perturbseq_2019_extract
