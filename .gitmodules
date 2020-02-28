@@ -37,3 +37,6 @@
 [submodule "lincs_l1000/lincs_l1000_phase_ii"]
 	path = lincs_l1000/lincs_l1000_phase_ii
 	url = ./lincs_l1000/lincs_l1000_phase_ii
+[submodule "mimii"]
+	path = mimii
+	url = ./mimii
