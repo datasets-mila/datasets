@@ -40,3 +40,6 @@
 [submodule "mimii"]
 	path = mimii
 	url = ./mimii
+[submodule "toyadmos"]
+	path = toyadmos
+	url = ./toyadmos
