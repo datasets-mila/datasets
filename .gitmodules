@@ -49,3 +49,6 @@
 [submodule "songlyrics/songlyrics_mousehead"]
 	path = songlyrics/songlyrics_mousehead
 	url = ./songlyrics/songlyrics_mousehead
+[submodule "songlyrics/songlyrics_gyani95"]
+	path = songlyrics/songlyrics_gyani95
+	url = ./songlyrics/songlyrics_gyani95
