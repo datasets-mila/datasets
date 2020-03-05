@@ -43,3 +43,6 @@
 [submodule "toyadmos"]
 	path = toyadmos
 	url = ./toyadmos
+[submodule "songlyrics/songlyrics_artimous"]
+	path = songlyrics/songlyrics_artimous
+	url = ./songlyrics/songlyrics_artimous
