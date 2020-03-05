@@ -52,3 +52,6 @@
 [submodule "songlyrics/songlyrics_gyani95"]
 	path = songlyrics/songlyrics_gyani95
 	url = ./songlyrics/songlyrics_gyani95
+[submodule "songlyrics/songlyrics"]
+	path = songlyrics/songlyrics
+	url = ./songlyrics/songlyrics
