@@ -61,3 +61,6 @@
 [submodule "voxceleb/voxceleb1"]
 	path = voxceleb/voxceleb1
 	url = ./voxceleb/voxceleb1
+[submodule "voxceleb/voxceleb2"]
+	path = voxceleb/voxceleb2
+	url = ./voxceleb/voxceleb2
