@@ -58,3 +58,6 @@
 [submodule "nwm"]
 	path = nwm
 	url = ./nwm
+[submodule "voxceleb/voxceleb1"]
+	path = voxceleb/voxceleb1
+	url = ./voxceleb/voxceleb1
