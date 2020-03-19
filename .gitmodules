@@ -59,8 +59,8 @@
 	path = nwm
 	url = ./nwm
 [submodule "voxceleb/voxceleb1"]
-	path = voxceleb/voxceleb1
+	path = restricted/voxceleb_users/voxceleb/voxceleb1
 	url = ./voxceleb/voxceleb1
 [submodule "voxceleb/voxceleb2"]
-	path = voxceleb/voxceleb2
+	path = restricted/voxceleb_users/voxceleb/voxceleb2
 	url = ./voxceleb/voxceleb2
