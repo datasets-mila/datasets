@@ -64,3 +64,6 @@
 [submodule "voxceleb/voxceleb2"]
 	path = restricted/voxceleb_users/voxceleb/voxceleb2
 	url = ./voxceleb/voxceleb2
+[submodule "covid-19/cord-19"]
+	path = covid-19/cord-19
+	url = ./covid-19/cord-19
