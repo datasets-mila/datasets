@@ -1,5 +1,5 @@
-.annex-cache/
-.data1/
-.tmp_processing/
+/.annex-cache/
+/.data1/
+/.tmp_processing/
 *.var/
-tmp/
+/tmp/

@@ -1,69 +1,92 @@
 [submodule "mnist"]
 	path = mnist
 	url = ./mnist
+	ignore = dirty
 [submodule "icentia11k"]
 	path = icentia11k
 	url = ./icentia11k
+	ignore = dirty
 [submodule "cifar100"]
 	path = cifar100
 	url = ./cifar100
+	ignore = dirty
 [submodule "imagenet"]
 	path = imagenet
 	url = ./imagenet
+	ignore = dirty
 [submodule "cifar10"]
 	path = cifar10
 	url = ./cifar10
+	ignore = dirty
 [submodule "scannet"]
 	path = restricted/scannet_users/scannet
 	url = ./restricted/scannet_users/scannet
+	ignore = dirty
 [submodule "convai2"]
 	path = convai2
 	url = ./convai2
+	ignore = dirty
 [submodule "personachat"]
 	path = personachat
 	url = ./personachat
+	ignore = dirty
 [submodule ".dataset_template"]
 	path = .dataset_template
 	url = ./.dataset_template
+	ignore = dirty
 [submodule "perturbseq/perturbseq_2016"]
 	path = perturbseq/perturbseq_2016
 	url = ./perturbseq/perturbseq_2016
+	ignore = dirty
 [submodule "perturbseq/perturbseq_2019"]
 	path = perturbseq/perturbseq_2019
 	url = ./perturbseq/perturbseq_2019
+	ignore = dirty
 [submodule "lincs_l1000/lincs_l1000_phase_i"]
 	path = lincs_l1000/lincs_l1000_phase_i
 	url = ./lincs_l1000/lincs_l1000_phase_i
+	ignore = dirty
 [submodule "lincs_l1000/lincs_l1000_phase_ii"]
 	path = lincs_l1000/lincs_l1000_phase_ii
 	url = ./lincs_l1000/lincs_l1000_phase_ii
+	ignore = dirty
 [submodule "mimii"]
 	path = mimii
 	url = ./mimii
+	ignore = dirty
 [submodule "toyadmos"]
 	path = toyadmos
 	url = ./toyadmos
+	ignore = dirty
 [submodule "songlyrics/songlyrics_artimous"]
 	path = songlyrics/songlyrics_artimous
 	url = ./songlyrics/songlyrics_artimous
+	ignore = dirty
 [submodule "songlyrics/songlyrics_mousehead"]
 	path = songlyrics/songlyrics_mousehead
 	url = ./songlyrics/songlyrics_mousehead
+	ignore = dirty
 [submodule "songlyrics/songlyrics_gyani95"]
 	path = songlyrics/songlyrics_gyani95
 	url = ./songlyrics/songlyrics_gyani95
+	ignore = dirty
 [submodule "songlyrics"]
 	path = songlyrics/songlyrics
 	url = ./songlyrics/songlyrics
+	ignore = dirty
 [submodule "nwm"]
 	path = nwm
 	url = ./nwm
+	ignore = dirty
 [submodule "voxceleb/voxceleb1"]
 	path = restricted/voxceleb_users/voxceleb/voxceleb1
 	url = ./voxceleb/voxceleb1
+	ignore = dirty
 [submodule "voxceleb/voxceleb2"]
 	path = restricted/voxceleb_users/voxceleb/voxceleb2
 	url = ./voxceleb/voxceleb2
+	ignore = dirty
 [submodule "covid-19/cord-19"]
 	path = covid-19/cord-19
 	url = ./covid-19/cord-19
+	ignore = dirty
