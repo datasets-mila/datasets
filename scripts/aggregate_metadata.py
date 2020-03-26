@@ -4,6 +4,7 @@ import glob
 import hashlib
 import json
 import os
+from pathlib import Path
 
 from datalad.api import Dataset, ls
 import git
@@ -63,6 +64,32 @@ def filter_nodes_duplicates(nodes):
     return filtered_nodes
 
 
+def fix_dir_links(ds_path, node_path):
+    ds_path = str(Path(ds_path).resolve())
+    node_json = load_json(ds_path, node_path)
+    for subnode in [_ for _ in node_json["nodes"] if _["type"] in {"dir", "link"}]:
+        resolved_path = str(Path(subnode["path"]).resolve())[len(ds_path.rstrip('/'))+1:]
+        is_link = subnode["path"] != resolved_path
+        if subnode["name"] != '.' and not is_link and subnode["type"] == "dir":
+            fix_dir_links(ds_path, subnode["path"])
+        elif is_link and os.path.isdir(resolved_path):
+            subnode["type"] = "dir"
+            subnode_json = load_json(ds_path, subnode["path"])
+            subnode_json["type"] = "dir"
+            subnode_here = next((_ for _ in subnode_json["nodes"] if _["name"] == "."), None)
+            if subnode_here is not None:
+                subnode_here["type"] = "dir"
+            subnode_parent = next((_ for _ in subnode_json["nodes"] if _["name"] == ".."), None)
+            if subnode_parent is None:
+                subnode_parent = copy.deepcopy(node_json)
+                subnode_parent["name"] = ".."
+                del subnode_parent["nodes"]
+                subnode_json["nodes"].insert(1, subnode_parent)
+                subnode_json["nodes"] = filter_nodes_duplicates(subnode_json["nodes"])
+            dump_json(ds_path, subnode["path"], subnode_json)
+    dump_json(ds_path, node_path, node_json)
+
+
 ds = Dataset(".")
 
 subds_var = {}
@@ -96,20 +123,21 @@ for path in ['.'] + subds_path:
     ds_json["commit_hash"] = git.Repo(abs_path).head.object.hexsha
     dump_json(abs_path, '/', ds_json)
 
-ds_json = load_json(ds.path, '/');
+ds_json = load_json(ds.path, '/')
 ds_json["nodes"] = [node for node in ds_json["nodes"] if len(node["name"]) == 1 or node["name"][0] != "."]
 dump_json(ds.path, '/', ds_json)
+fix_dir_links(ds.path, '/')
 
 del ds_json["nodes"]
 
 for subds_var_dir, subds_vars_path in subds_var.items():
     try:
-        dir_json = load_json(ds.path, subds_var_dir);
+        dir_json = load_json(ds.path, subds_var_dir)
     except FileNotFoundError as error:
         continue
 
     for subds_var_path in subds_vars_path:
-        var_json = load_json(os.path.join(ds.path, subds_var_path), '/');
+        var_json = load_json(os.path.join(ds.path, subds_var_path), '/')
 
         ds_json["name"] = ".."
         ds_json["path"] = os.path.relpath(".", subds_var_path)
