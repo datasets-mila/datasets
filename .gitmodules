@@ -90,3 +90,6 @@
 	path = covid-19/cord-19
 	url = ./covid-19/cord-19
 	ignore = dirty
+[submodule "covid-19/ecdc_covid-19"]
+	path = covid-19/ecdc_covid-19
+	url = ./covid-19/ecdc_covid-19
