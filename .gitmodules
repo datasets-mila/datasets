@@ -93,6 +93,3 @@
 [submodule "covid-19/ecdc_covid-19"]
 	path = covid-19/ecdc_covid-19
 	url = ./covid-19/ecdc_covid-19
-[submodule "timit"]
-	path = timit
-	url = ./timit
