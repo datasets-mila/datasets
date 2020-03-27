@@ -67,11 +67,14 @@ def filter_nodes_duplicates(nodes):
 def fix_dir_links(ds_path, node_path):
     ds_path = str(Path(ds_path).resolve())
     node_json = load_json(ds_path, node_path)
-    for subnode in [_ for _ in node_json["nodes"] if _["type"] in {"dir", "link"}]:
+    for subnode in [_ for _ in node_json["nodes"] if _["type"] in {"dir", "link", "link-broken"}]:
         resolved_path = str(Path(subnode["path"]).resolve())[len(ds_path.rstrip('/'))+1:]
         is_link = subnode["path"] != resolved_path
         if subnode["name"] != '.' and not is_link and subnode["type"] == "dir":
             fix_dir_links(ds_path, subnode["path"])
+        elif subnode["type"] == "link-broken" and os.path.isfile(resolved_path):
+            subnode["type"] = "link"
+            dump_json(ds_path, subnode["path"], subnode_json)
         elif is_link and os.path.isdir(resolved_path):
             subnode["type"] = "dir"
             subnode_json = load_json(ds_path, subnode["path"])
@@ -102,32 +105,37 @@ for subds in ds.subdatasets():
     subds_var[path].sort()
     subds_path.extend(subds_var[path])
 
+subds_to_update = [path for path in subds_path if ds_need_update(ds.path, path)]
 
-is_ds_need_update = ds_need_update(ds.path, '.')
-ds_to_update = [path for path in subds_path if ds_need_update(ds.path, path)]
+ls(subds_to_update, recursive=True, all_=True, long_=True, json="file")
 
-push_git_dir(os.path.join(ds.path, ".git"))
-if is_ds_need_update:
+if subds_to_update or ds_need_update(ds.path, '.'):
+    push_git_dir(os.path.join(ds.path, ".git"))
     ds.aggregate_metadata()
-ls(ds_to_update, recursive=True, all_=True, long_=True, json="file")
-if is_ds_need_update:
     ls('.', recursive=False, all_=True, long_=True, json="file")
-pop_git_dir()
+    pop_git_dir()
 
 for path in ['.'] + subds_path:
     abs_path = os.path.join(ds.path, path)
     try:
-        ds_json = load_json(abs_path, '/')
+        subds_json = load_json(abs_path, '/')
     except FileNotFoundError as error:
         continue
-    ds_json["commit_hash"] = git.Repo(abs_path).head.object.hexsha
-    dump_json(abs_path, '/', ds_json)
+    subds_json["commit_hash"] = git.Repo(abs_path).head.object.hexsha
+    subds_parent = next((_ for _ in subds_json["nodes"] if _["name"] == ".."), None)
+    if path != '.' and subds_parent is None:
+        subds_parent = copy.deepcopy(subds_json)
+        subds_parent["path"] = os.path.relpath(".", path)
+        subds_parent["name"] = ".."
+        del subds_parent["nodes"]
+        subds_json["nodes"].insert(1, subds_parent)
+        subds_json["nodes"] = filter_nodes_duplicates(subds_json["nodes"])
+    dump_json(abs_path, '/', subds_json)
 
 ds_json = load_json(ds.path, '/')
 ds_json["nodes"] = [node for node in ds_json["nodes"] if len(node["name"]) == 1 or node["name"][0] != "."]
 dump_json(ds.path, '/', ds_json)
 fix_dir_links(ds.path, '/')
-
 del ds_json["nodes"]
 
 for subds_var_dir, subds_vars_path in subds_var.items():
@@ -137,7 +145,10 @@ for subds_var_dir, subds_vars_path in subds_var.items():
         continue
 
     for subds_var_path in subds_vars_path:
-        var_json = load_json(os.path.join(ds.path, subds_var_path), '/')
+        try:
+            var_json = load_json(os.path.join(ds.path, subds_var_path), '/')
+        except FileNotFoundError as error:
+            continue
 
         ds_json["name"] = ".."
         ds_json["path"] = os.path.relpath(".", subds_var_path)

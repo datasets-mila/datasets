@@ -35,6 +35,12 @@
         <script>
 	  jQuery(document).ready(function() {
 	    var table = directory(jQuery, md5);  // construct table based on files in directory and their metadata
+	    install_cmd = jQuery("span.command")[0]
+	    install_cmd.innerText = install_cmd.innerText.replace(loc().origin, '{user}@login.server.mila.quebec:/network/datasets');
+	    table.on('init.dt', function(e, settings, json) {
+	      breadcrumd_root = jQuery(".breadcrumb a span.annex")[0]
+	      breadcrumd_root.innerText = breadcrumd_root.innerText.replace(loc().origin.split('/')[2], '{user}@login.server.mila.quebec:/network/datasets');
+	    })
 	  });
 	</script>
     </body>
