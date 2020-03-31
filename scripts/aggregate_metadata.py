@@ -5,8 +5,10 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import subprocess
 
 from datalad.api import Dataset, ls
+from datalad.interface.ls_webui import fs_traverse
 import git
 
 
@@ -44,14 +46,49 @@ def dump_json(ds_path, entry, json_content):
         json.dump(json_content, f)
 
 
+def build_json_cache(path_split, repo, base_path, subdatasets=[], recurse_directories=False):
+    for i in range(len(path_split) if recurse_directories else 1):
+        path = '/'.join(path_split[:i+1])
+        fs_traverse(path, repo,
+                parent=None,
+                subdatasets=[_[len(path)+1:] for _ in subdatasets if _.startswith(path)],
+                render=True,
+                recurse_directories=False,
+                recurse_datasets=False,
+                json="file",
+                basepath=base_path)
+
+
 def ds_need_update(root_path, ds_path):
     abs_path = os.path.join(root_path, ds_path)
+    try:
+        commit_hash = git.Repo(abs_path).head.object.hexsha
+    except git.exc.InvalidGitRepositoryError as error:
+        return False
     try:
         ds_json = load_json(abs_path, '/')
     except FileNotFoundError as error:
         return True
+    return ds_json.get("commit_hash", None) != commit_hash
 
-    return ds_json.get("commit_hash", None) != git.Repo(abs_path).head.object.hexsha
+
+def fix_links(ds_path, node_path):
+    ds_path = str(Path(ds_path).resolve())
+    try:
+        node_json = load_json(ds_path, node_path)
+    except FileNotFoundError as error:
+        return
+    for subnode in [_ for _ in node_json["nodes"] if _["type"] in {"dir", "link", "link-broken"}]:
+        resolved_path = str(Path(subnode["path"]).resolve())[len(ds_path.rstrip('/'))+1:]
+        is_link = subnode["path"] != resolved_path
+        if subnode["name"] != '.' and not is_link and subnode["type"] == "dir":
+            fix_links(ds_path, subnode["path"])
+        elif subnode["type"] == "link-broken" and os.path.isfile(resolved_path):
+            subnode["type"] = "link"
+        elif is_link and os.path.isdir(resolved_path):
+            subnode["type"] = "dir"
+            subnode["path"] = os.path.relpath(resolved_path, node_path)
+    dump_json(ds_path, node_path, node_json)
 
 
 def filter_nodes_duplicates(nodes):
@@ -64,41 +101,12 @@ def filter_nodes_duplicates(nodes):
     return filtered_nodes
 
 
-def fix_dir_links(ds_path, node_path):
-    ds_path = str(Path(ds_path).resolve())
-    node_json = load_json(ds_path, node_path)
-    for subnode in [_ for _ in node_json["nodes"] if _["type"] in {"dir", "link", "link-broken"}]:
-        resolved_path = str(Path(subnode["path"]).resolve())[len(ds_path.rstrip('/'))+1:]
-        is_link = subnode["path"] != resolved_path
-        if subnode["name"] != '.' and not is_link and subnode["type"] == "dir":
-            fix_dir_links(ds_path, subnode["path"])
-        elif subnode["type"] == "link-broken" and os.path.isfile(resolved_path):
-            subnode["type"] = "link"
-            dump_json(ds_path, subnode["path"], subnode_json)
-        elif is_link and os.path.isdir(resolved_path):
-            subnode["type"] = "dir"
-            subnode_json = load_json(ds_path, subnode["path"])
-            subnode_json["type"] = "dir"
-            subnode_here = next((_ for _ in subnode_json["nodes"] if _["name"] == "."), None)
-            if subnode_here is not None:
-                subnode_here["type"] = "dir"
-            subnode_parent = next((_ for _ in subnode_json["nodes"] if _["name"] == ".."), None)
-            if subnode_parent is None:
-                subnode_parent = copy.deepcopy(node_json)
-                subnode_parent["name"] = ".."
-                del subnode_parent["nodes"]
-                subnode_json["nodes"].insert(1, subnode_parent)
-                subnode_json["nodes"] = filter_nodes_duplicates(subnode_json["nodes"])
-            dump_json(ds_path, subnode["path"], subnode_json)
-    dump_json(ds_path, node_path, node_json)
-
-
 ds = Dataset(".")
 
 subds_var = {}
 subds_path = []
-for subds in ds.subdatasets():
-    path = subds["path"][len(ds.path.rstrip('/'))+1:].rstrip('/')
+for path in ds.subdatasets(result_xfm='relpaths'):
+    path = path.rstrip('/')
     subds_path.append(path)
     path += ".var"
     subds_var[path] = glob.glob(os.path.join(path, "*"))
@@ -107,13 +115,14 @@ for subds in ds.subdatasets():
 
 subds_to_update = [path for path in subds_path if ds_need_update(ds.path, path)]
 
-ls(subds_to_update, recursive=True, all_=True, long_=True, json="file")
+if subds_to_update:
+    ls(subds_to_update, recursive=True, all_=True, long_=True, json="file")
 
 if subds_to_update or ds_need_update(ds.path, '.'):
     push_git_dir(os.path.join(ds.path, ".git"))
     ds.aggregate_metadata()
-    ls('.', recursive=False, all_=True, long_=True, json="file")
     pop_git_dir()
+    subprocess.run([os.path.join(ds.path, "scripts/aggregate_metadata_root.sh")], check=True)
 
 for path in ['.'] + subds_path:
     abs_path = os.path.join(ds.path, path)
@@ -135,7 +144,7 @@ for path in ['.'] + subds_path:
 ds_json = load_json(ds.path, '/')
 ds_json["nodes"] = [node for node in ds_json["nodes"] if len(node["name"]) == 1 or node["name"][0] != "."]
 dump_json(ds.path, '/', ds_json)
-fix_dir_links(ds.path, '/')
+fix_links(ds.path, '/')
 del ds_json["nodes"]
 
 for subds_var_dir, subds_vars_path in subds_var.items():
