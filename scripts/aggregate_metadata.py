@@ -63,7 +63,7 @@ def ds_need_update(root_path, ds_path):
     abs_path = os.path.join(root_path, ds_path)
     try:
         commit_hash = git.Repo(abs_path).head.object.hexsha
-    except git.exc.InvalidGitRepositoryError as error:
+    except (git.exc.NoSuchPathError, git.exc.InvalidGitRepositoryError) as error:
         return False
     try:
         ds_json = load_json(abs_path, '/')

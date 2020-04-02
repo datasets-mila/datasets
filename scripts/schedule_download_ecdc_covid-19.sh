@@ -17,4 +17,4 @@ export TZ=CET
 (cd $DATASET && nice ionice -n7 datalad run scripts/download.sh)
 (nice ionice -n7 ./scripts/build_dataset_sync_trees.sh --dataset=$DATASET)
 
-at 16:00 TOMORROW <<<"$PWD/scripts/schedule_ecdc_covid-19_download.sh"
+at 16:00 TOMORROW <<<"$PWD/scripts/schedule_download_ecdc_covid-19.sh"
