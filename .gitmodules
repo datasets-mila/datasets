@@ -99,3 +99,6 @@
 [submodule "coco"]
 	path = coco
 	url = ./coco
+[submodule "cityscapes"]
+	path = cityscapes
+	url = ./cityscapes
