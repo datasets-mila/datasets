@@ -2,11 +2,11 @@
 ".":
 {
 "content_info":
-"objects/72/cn-e5976e0b013b544d94756cf0aa1e37.xz",
+"objects/f4/cn-73b2fac8eab9ecb779e254c2666bc2.xz",
 "datalad_version":
 "0.11.8",
 "dataset_info":
-"objects/72/ds-e5976e0b013b544d94756cf0aa1e37",
+"objects/f4/ds-73b2fac8eab9ecb779e254c2666bc2",
 "extractors":
 [
 "datalad_core",
@@ -15,6 +15,6 @@
 "id":
 "e25d0e90-ec80-11e9-bf67-5a7ba6dec090",
 "refcommit":
-"103d3d7c37328bd4e860729e1a3cc94d10855e75"
+"59f0692f81f006a6d019af77981cdaaa40f069e5"
 }
 }
