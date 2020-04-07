@@ -15,6 +15,11 @@ mkdir -p .tmp_processing
 chmod o-rwx .tmp_processing
 
 datalad install -s . .tmp_processing/$(basename $PWD)_sync_tree
+cd .tmp_processing/$(basename $PWD)_sync_tree
+SYNC_DS=$PWD
+
+datalad update -s origin
+git reset --hard origin/master
 
 subdatasets=$(datalad subdatasets | grep -o ": .* (dataset)" | grep -o " .* " | grep -o "[^ ]*")
 for subdataset in ${subdatasets[*]}
