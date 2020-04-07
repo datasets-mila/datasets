@@ -11,6 +11,8 @@ SUPER_DS=/network/datasets
 
 cd $SUPER_DS
 
+SYNC_DS=$PWD/.$(basename $PWD)_sync_tree
+
 for i in "$@"
 do
 	case ${i} in
@@ -37,9 +39,7 @@ then
 	exit 1
 fi
 
-cd .tmp_processing/$(basename $PWD)_sync_tree
-
-SYNC_DS=$PWD
+cd $SYNC_DS
 
 (cd $SUPER_DS && [ "$(cat $SYNC_DS/$DATASET/commit_hash)" != "$(git -C $DATASET rev-parse HEAD)" ] && \
 	rm -rf $SYNC_DS/$DATASET/* && \

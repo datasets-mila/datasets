@@ -14,7 +14,10 @@ MILA_ROOT=datasets
 BELUGA_ROOT=projects/rpp-bengioy/data/curated
 
 SUPER_DS=/network/datasets
-SYNC_DS=$SUPER_DS/.tmp_processing/$(basename $PWD)_sync_tree
+
+cd $SUPER_DS
+
+SYNC_DS=$PWD/.$(basename $PWD)_sync_tree
 
 cd $SYNC_DS
 

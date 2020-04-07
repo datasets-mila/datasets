@@ -1,5 +1,6 @@
 /.annex-cache/
 /.data1/
+/.datasets_sync_tree/
 /.tmp_processing/
 *.var/
 /parlai/*/*
