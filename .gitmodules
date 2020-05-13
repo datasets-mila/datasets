@@ -102,3 +102,6 @@
 [submodule "cityscapes"]
 	path = cityscapes
 	url = ./cityscapes
+[submodule "hotels50K"]
+	path = hotels50K
+	url = ./hotels50K
