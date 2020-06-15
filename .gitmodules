@@ -111,3 +111,6 @@
 [submodule "commonvoice"]
 	path = commonvoice
 	url = ./commonvoice
+[submodule "dns-challenge"]
+	path = dns-challenge
+	url = ./dns-challenge
