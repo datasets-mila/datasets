@@ -105,3 +105,6 @@
 [submodule "hotels50K"]
 	path = hotels50K
 	url = ./hotels50K
+[submodule "librispeech"]
+	path = librispeech
+	url = ./librispeech
