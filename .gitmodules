@@ -114,3 +114,6 @@
 [submodule "dns-challenge"]
 	path = dns-challenge
 	url = ./dns-challenge
+[submodule "ami"]
+	path = ami
+	url = ./ami
