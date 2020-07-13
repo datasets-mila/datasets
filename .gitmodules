@@ -117,3 +117,6 @@
 [submodule "ami"]
 	path = ami
 	url = ./ami
+[submodule "open_images_dataset"]
+	path = open_images_dataset
+	url = ./open_images_dataset
