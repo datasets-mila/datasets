@@ -120,3 +120,6 @@
 [submodule "open_images_dataset"]
 	path = open_images_dataset
 	url = ./open_images_dataset
+[submodule "open_images"]
+	path = open_images
+	url = ./open_images
