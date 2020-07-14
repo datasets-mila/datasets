@@ -120,3 +120,6 @@
 [submodule "open_images"]
 	path = open_images
 	url = ./open_images
+[submodule "chime5"]
+	path = chime5
+	url = ./chime5
