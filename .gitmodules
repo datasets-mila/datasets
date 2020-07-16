@@ -80,11 +80,11 @@
 	ignore = dirty
 [submodule "voxceleb/voxceleb1"]
 	path = restricted/voxceleb_users/voxceleb/voxceleb1
-	url = ./voxceleb/voxceleb1
+	url = ./restricted/voxceleb_users/voxceleb/voxceleb1
 	ignore = dirty
 [submodule "voxceleb/voxceleb2"]
 	path = restricted/voxceleb_users/voxceleb/voxceleb2
-	url = ./voxceleb/voxceleb2
+	url = ./restricted/voxceleb_users/voxceleb/voxceleb2
 	ignore = dirty
 [submodule "covid-19/cord-19"]
 	path = covid-19/cord-19
