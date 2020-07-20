@@ -126,3 +126,6 @@
 [submodule "playing_for_data"]
 	path = playing_for_data
 	url = ./playing_for_data
+[submodule "ava-kinetics"]
+	path = ava-kinetics
+	url = ./ava-kinetics
