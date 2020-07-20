@@ -123,3 +123,6 @@
 [submodule "chime5"]
 	path = restricted/chime5_users/chime5
 	url = ./restricted/chime5_users/chime5
+[submodule "playing_for_data"]
+	path = playing_for_data
+	url = ./playing_for_data
