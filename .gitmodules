@@ -129,3 +129,6 @@
 [submodule "ava-kinetics"]
 	path = ava-kinetics
 	url = ./ava-kinetics
+[submodule "webtext"]
+	path = webtext
+	url = ./webtext
