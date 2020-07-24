@@ -132,3 +132,6 @@
 [submodule "webtext"]
 	path = webtext
 	url = ./webtext
+[submodule "LDC/ontonotes"]
+	path = LDC/ontonotes
+	url = ./LDC/ontonotes
