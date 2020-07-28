@@ -135,3 +135,6 @@
 [submodule "LDC/ontonotes"]
 	path = LDC/ontonotes
 	url = ./LDC/ontonotes
+[submodule "kitti"]
+	path = kitti
+	url = ./kitti
