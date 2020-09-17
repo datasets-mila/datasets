@@ -138,3 +138,6 @@
 [submodule "kitti"]
 	path = kitti
 	url = ./kitti
+[submodule "naturalquestions"]
+	path = naturalquestions
+	url = ./naturalquestions
