@@ -141,3 +141,6 @@
 [submodule "naturalquestions"]
 	path = naturalquestions
 	url = ./naturalquestions
+[submodule "modelnet40"]
+	path = modelnet40
+	url = ./modelnet40
