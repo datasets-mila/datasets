@@ -147,3 +147,6 @@
 [submodule "restricted/humantrafficking_users/ht_database"]
 	path = restricted/humantrafficking_users/ht_database
 	url = ./restricted/humantrafficking_users/ht_database
+[submodule "mimiciii"]
+	path = mimiciii
+	url = ./mimiciii
