@@ -156,3 +156,6 @@
 [submodule "climatenet"]
 	path = climatenet
 	url = ./climatenet
+[submodule "2d3dsemantics"]
+	path = 2d3dsemantics
+	url = ./2d3dsemantics
