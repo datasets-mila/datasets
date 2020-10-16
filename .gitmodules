@@ -153,3 +153,6 @@
 [submodule "tinyimagenet"]
 	path = tinyimagenet
 	url = ./tinyimagenet
+[submodule "climatenet"]
+	path = climatenet
+	url = ./climatenet
