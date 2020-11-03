@@ -159,6 +159,6 @@
 [submodule "2d3dsemantics"]
 	path = restricted/2d3dsemantics_users/2d3dsemantics
 	url = ./restricted/2d3dsemantics_users/2d3dsemantics
-[submodule "restricted/thirddihard_users/third_dihard_challenge"]
+[submodule "third_dihard_challenge"]
 	path = restricted/thirddihard_users/third_dihard_challenge
 	url = ./restricted/thirddihard_users/third_dihard_challenge
