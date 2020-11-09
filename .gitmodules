@@ -162,3 +162,6 @@
 [submodule "third_dihard_challenge"]
 	path = restricted/thirddihard_users/third_dihard_challenge
 	url = ./restricted/thirddihard_users/third_dihard_challenge
+[submodule "ffhq"]
+	path = ffhq
+	url = ./ffhq
