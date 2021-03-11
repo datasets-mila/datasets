@@ -165,3 +165,6 @@
 [submodule "ffhq"]
 	path = ffhq
 	url = ./ffhq
+[submodule "wikitext"]
+	path = wikitext
+	url = ./wikitext
