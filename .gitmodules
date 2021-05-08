@@ -168,3 +168,6 @@
 [submodule "wikitext"]
 	path = wikitext
 	url = ./wikitext
+[submodule "openwebtext"]
+	path = openwebtext
+	url = ./openwebtext
