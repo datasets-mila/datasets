@@ -174,3 +174,6 @@
 [submodule "ubuntu"]
 	path = ubuntu
 	url = ./ubuntu
+[submodule "twitter"]
+	path = twitter
+	url = ./twitter
