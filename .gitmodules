@@ -177,3 +177,6 @@
 [submodule "twitter"]
 	path = twitter
 	url = ./twitter
+[submodule "describable-textures"]
+	path = describable-textures
+	url = ./describable-textures
