@@ -180,3 +180,6 @@
 [submodule "describable-textures"]
 	path = describable-textures
 	url = ./describable-textures
+[submodule "restricted/inat_users/inat"]
+	path = restricted/inat_users/inat
+	url = ./restricted/inat_users/inat
