@@ -186,3 +186,6 @@
 [submodule "domainnet"]
 	path = domainnet
 	url = ./domainnet
+[submodule "c4"]
+	path = c4
+	url = ./c4
