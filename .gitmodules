@@ -189,3 +189,6 @@
 [submodule "c4"]
 	path = c4
 	url = ./c4
+[submodule "gaia"]
+	path = gaia
+	url = ./gaia
