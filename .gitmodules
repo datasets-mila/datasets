@@ -192,3 +192,12 @@
 [submodule "gaia"]
 	path = gaia
 	url = ./gaia
+[submodule "oc20"]
+	path = oc20
+	url = ./oc20
+[submodule "msd"]
+	path = msd
+	url = ./msd
+[submodule "nuscenes"]
+	path = nuscenes
+	url = ./nuscenes
