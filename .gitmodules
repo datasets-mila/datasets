@@ -201,3 +201,6 @@
 [submodule "nuscenes"]
 	path = nuscenes
 	url = ./nuscenes
+[submodule "dtd"]
+	path = dtd
+	url = ./dtd
