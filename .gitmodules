@@ -204,6 +204,6 @@
 [submodule "dtd"]
 	path = dtd
 	url = ./dtd
-[submodule "vggflowers102"]
-	path = vggflowers102
-	url = ./vggflowers102
+[submodule "conceptualcaptions"]
+	path = conceptualcaptions
+	url = ./conceptualcaptions
