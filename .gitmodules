@@ -207,3 +207,6 @@
 [submodule "conceptualcaptions"]
 	path = conceptualcaptions
 	url = ./conceptualcaptions
+[submodule "geolifeclef"]
+	path = geolifeclef
+	url = ./geolifeclef
