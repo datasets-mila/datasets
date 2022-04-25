@@ -1,0 +1,1 @@
+../places365.var/places365_torchvision/categories_places365.txt
