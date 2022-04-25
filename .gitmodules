@@ -156,9 +156,6 @@
 [submodule "climatenet"]
 	path = climatenet
 	url = ./climatenet
-[submodule "2d3dsemantics"]
-	path = restricted/2d3dsemantics_users/2d3dsemantics
-	url = ./restricted/2d3dsemantics_users/2d3dsemantics
 [submodule "third_dihard_challenge"]
 	path = restricted/thirddihard_users/third_dihard_challenge
 	url = ./restricted/thirddihard_users/third_dihard_challenge
@@ -276,3 +273,12 @@
 [submodule "waymoperception"]
 	path = waymoperception
 	url = ./waymoperception
+[submodule "restricted/2d3dsemantics_users/2d3dsemantics"]
+	path = restricted/2d3dsemantics_users/2d3dsemantics
+	url = ./restricted/2d3dsemantics_users/2d3dsemantics
+[submodule "restricted/icmlexvo2022_users/icmlexvo2022"]
+	path = restricted/icmlexvo2022_users/icmlexvo2022
+	url = ./restricted/icmlexvo2022_users/icmlexvo2022
+[submodule "restricted/mimiciii_users/mimiciii"]
+	path = restricted/mimiciii_users/mimiciii
+	url = ./restricted/mimiciii_users/mimiciii
