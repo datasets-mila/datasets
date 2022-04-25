@@ -63,10 +63,11 @@ subds_paths.sort()
 sizes = np.zeros((85732287 + 23011954,), np.int64)
 filenames = [""] * sizes.size
 size_i = 0
-for filename in (# "/home/satya-local/datasets_data1_files_list",
-        "/home/satya-local/datasets_files_list",):
+for filename in (# ".tmp_processing/compute_files_stats/datasets_files_list",
+                 ".tmp_processing/compute_files_stats/datasets_data1_files_list",
+                 ):
     print(f"Extracting files info from {filename}")
-    with open(filename) as f:
+    with open(filename, errors="ignore") as f:
         line = f.readline()
         while line:
             file_ls_info = [v for v in line.split('\t') if v]
@@ -95,7 +96,11 @@ for filename in (# "/home/satya-local/datasets_data1_files_list",
                 size_i += 1
             except ValueError as error:
                 print(f"Could not parse string as int or float for file info {file_ls_info}: {str(error)}")
-            line = f.readline()
+            try:
+                line = f.readline()
+            except UnicodeDecodeError as error:
+                print(f"Skipping ling: {error}")
+                line = f.readline()
 
 sizes = sizes[:size_i]
 filenames = filenames[:size_i]

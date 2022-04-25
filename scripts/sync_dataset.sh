@@ -1,21 +1,16 @@
 #!/bin/bash
 
-export PATH="$(cd ~; pwd)/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+MILA=$(git config -f scripts/config/config --get mila.globus)
+BELUGA=$(git config -f scripts/config/config --get computecanada.beluga.globus)
 
-pyenv deactivate
-pyenv activate miniconda3-4.3.30/envs/datalad
-
-MILA=4c35a8e6-685e-11ea-af52-0201714f6eab
-BELUGA=278b9bfe-24da-11e9-9fa2-0a06afd4a22e
-
-MILA_ROOT=datasets
-BELUGA_ROOT=projects/rpp-bengioy/data/curated
+MILA_ROOT=$(git config -f scripts/config/config --get mila.data-root)
+BELUGA_ROOT=$(git config -f scripts/config/config --get computecanada.beluga.data-root)
 
 SUPER_DS=/network/datasets
 
 cd $SUPER_DS
+
+source scripts/activate_datalad.sh
 
 SYNC_DS=$PWD/.$(basename $PWD)_sync_tree
 
