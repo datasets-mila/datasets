@@ -210,3 +210,69 @@
 [submodule "geolifeclef"]
 	path = geolifeclef
 	url = ./geolifeclef
+[submodule "dcase2020"]
+	path = dcase2020
+	url = ./dcase2020
+[submodule "caltech101"]
+	path = caltech101
+	url = ./caltech101
+[submodule "caltech256"]
+	path = caltech256
+	url = ./caltech256
+[submodule "celeba"]
+	path = celeba
+	url = ./celeba
+[submodule "cub200"]
+	path = cub200
+	url = ./cub200
+[submodule "fashionmnist"]
+	path = fashionmnist
+	url = ./fashionmnist
+[submodule "fgvcaircraft"]
+	path = fgvcaircraft
+	url = ./fgvcaircraft
+[submodule "fgvcxfungi"]
+	path = fgvcxfungi
+	url = ./fgvcxfungi
+[submodule "flowers102"]
+	path = flowers102
+	url = ./flowers102
+[submodule "gtsrb"]
+	path = gtsrb
+	url = ./gtsrb
+[submodule "inat"]
+	path = inat
+	url = ./inat
+[submodule "kmnist"]
+	path = kmnist
+	url = ./kmnist
+[submodule "metadataset"]
+	path = metadataset
+	url = ./metadataset
+[submodule "nlvr2"]
+	path = nlvr2
+	url = ./nlvr2
+[submodule "omniglot"]
+	path = omniglot
+	url = ./omniglot
+[submodule "partnet"]
+	path = partnet
+	url = ./partnet
+[submodule "places365"]
+	path = places365
+	url = ./places365
+[submodule "qmnist"]
+	path = qmnist
+	url = ./qmnist
+[submodule "quickdraw"]
+	path = quickdraw
+	url = ./quickdraw
+[submodule "shapenet"]
+	path = shapenet
+	url = ./shapenet
+[submodule "svhn"]
+	path = svhn
+	url = ./svhn
+[submodule "waymoperception"]
+	path = waymoperception
+	url = ./waymoperception
