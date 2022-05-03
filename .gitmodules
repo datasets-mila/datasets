@@ -282,3 +282,6 @@
 [submodule "restricted/mimiciii_users/mimiciii"]
 	path = restricted/mimiciii_users/mimiciii
 	url = ./restricted/mimiciii_users/mimiciii
+[submodule "stl10"]
+	path = stl10
+	url = ./stl10
