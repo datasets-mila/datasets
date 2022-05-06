@@ -4,6 +4,5 @@
 /.tmp_processing/
 *.var/
 /parlai/*/*
-/tmp/
-/torchvision/*/*
+/[\.]tmp/
 /torchvision/*/*
