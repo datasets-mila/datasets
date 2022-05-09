@@ -282,3 +282,6 @@
 [submodule "stl10"]
 	path = stl10
 	url = ./stl10
+[submodule "multiobjectdatasets"]
+	path = multiobjectdatasets
+	url = ./multiobjectdatasets
