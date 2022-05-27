@@ -285,3 +285,6 @@
 [submodule "multiobjectdatasets"]
 	path = multiobjectdatasets
 	url = ./multiobjectdatasets
+[submodule "robotcar"]
+	path = robotcar
+	url = ./robotcar
