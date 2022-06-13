@@ -2,18 +2,20 @@
 
 SUPER_DS=/network/datasets
 
-cd $SUPER_DS
+pushd $SUPER_DS
 
 source scripts/activate_datalad.sh
+source scripts/utils.sh echo -n
+set -o errexit -o pipefail
 
-datalad install -s . .$(basename $PWD)_sync_tree
-(cd .$(basename $PWD)_sync_tree && \
- chmod o-rwx $PWD && \
- datalad update -s origin && \
- git reset --hard origin/master)
+WL_DIR=.$(basename $PWD)_sync_tree/.whitelist/
 
-subdatasets=$(datalad subdatasets | grep -o ": .* (dataset)" | grep -o " .* " | grep -o "[^ ]*")
-for subdataset in ${subdatasets[*]}
+subdatasets --var | while read subds
 do
-	(./scripts/build_dataset_sync_trees.sh --dataset=$subdataset)
+	if grep "^1" "${WL_DIR}/${subds}/check" > /dev/null
+	then
+		./scripts/build_dataset_sync_tree.sh --dataset "${subds}"
+	fi
 done
+
+popd

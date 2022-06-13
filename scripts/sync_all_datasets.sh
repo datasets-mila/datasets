@@ -2,13 +2,15 @@
 
 SUPER_DS=/network/datasets
 
-cd $SUPER_DS
+pushd "${SUPER_DS}"
 
 source scripts/activate_datalad.sh
+source scripts/utils.sh echo -n
+set -o errexit -o pipefail
 
-subdatasets=$(datalad subdatasets | grep -o ": .* (dataset)" | grep -o " .* " | grep -o "[^ ]*")
-
-for subds in ${subdatasets[*]}
+subdatasets --var | while read subds
 do
-	(./scripts/sync_dataset.sh --dataset=$subds)
+	./scripts/sync_dataset.sh --dataset "${subds}"
 done
+
+popd
