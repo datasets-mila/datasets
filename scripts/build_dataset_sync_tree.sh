@@ -45,7 +45,7 @@ then
 	# echo "--recursive ${_DATASET} ${_DATASET}" > "${SYNC_DS}/${_DATASET}/files_list"
 	find -L "${_DATASET}"/* \( -name ".*" -o -name "*.jugdata" -o -name "bin" \) -prune -o \
 		-type f -printf "%C@:%p %p\n" >> "${SYNC_DS}/${_DATASET}/files_list"
-	echo ":${SYNC_DS}/${_DATASET}/files_list ${_DATASET}/files_list" >> "${SYNC_DS}/${_DATASET}/files_list"
+	# echo ":${SYNC_DS}/${_DATASET}/files_list ${_DATASET}/files_list" >> "${SYNC_DS}/${_DATASET}/files_list"
 	echo "$(git -C "${_DATASET}" rev-parse HEAD)" > "${SYNC_DS}/${_DATASET}/commit_hash"
 fi
 
