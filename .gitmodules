@@ -145,8 +145,8 @@
 	path = modelnet40
 	url = ./modelnet40
 [submodule "mimiciii"]
-	path = restricted/mimiciii_users/mimiciii
-	url = ./restricted/mimiciii_users/mimiciii
+	path = mimiciii
+	url = ./mimiciii
 [submodule "tinyimagenet"]
 	path = tinyimagenet
 	url = ./tinyimagenet
