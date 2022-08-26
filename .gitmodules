@@ -288,3 +288,6 @@
 [submodule "robotcar"]
 	path = robotcar
 	url = ./robotcar
+[submodule "restricted/objects365_users/objects365"]
+	path = restricted/objects365_users/objects365
+	url = ./restricted/objects365_users/objects365
