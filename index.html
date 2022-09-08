@@ -35,17 +35,18 @@
         <script>
 	  jQuery(document).ready(function() {
 	    var table = directory(jQuery, md5);  // construct table based on files in directory and their metadata
-	    api = table.api()
-	    install_cmd = jQuery("span.command")[0]
-	    install_cmd.innerText = install_cmd.innerText.replace(loc().origin, '{user}@login.server.mila.quebec:/network/datasets');
+	    api = table.api();
+            jQuery("#installation")[0].style.visibility = "hidden";
+	    install_cmd = jQuery("span.command")[0];
+	    install_cmd.innerText = install_cmd.innerText.replace('///', '/network/datasets');
 	    table.on('init.dt', function(e, settings, json) {
-	      breadcrumd_root = jQuery(".breadcrumb a span.annex")[0]
-	      breadcrumd_root.innerText = breadcrumd_root.innerText.replace(loc().origin.split('/')[2], '{user}@login.server.mila.quebec:/network/datasets');
+	      breadcrumd_root = jQuery(".breadcrumb a span.annex")[0];
+	      breadcrumd_root.innerText = breadcrumd_root.innerText.replace(loc().origin.split('/')[2], '/network/datasets');
 	      api.$('tr').each(function (index, item) {
 	        var data = api.row(item).data();
 	        if (data.type == "dir" && !['.', ".."].includes(data.name) &&
 			data.path.startsWith("..") && data.name != data.path) {
-	          data.name = data.path
+	          data.name = data.path;
 	        }
 	      });
 	    })

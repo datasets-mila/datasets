@@ -36,7 +36,7 @@ function _get_from_commit_hash {
 	then
 		cat commit_hash
 	else
-		ssh ${_cluster} "cat '${_FROM_ROOT}/$_DATASET/commit_hash'"
+		ssh ${_cluster} "cat '${_FROM_ROOT}/$_DATASET/commit_hash'" </dev/null
 	fi
 }
 
@@ -46,7 +46,7 @@ function _get_to_commit_hash {
 	then
 		cat commit_hash
 	else
-		ssh ${_cluster} "cat '${_TO_ROOT}/$_DATASET/commit_hash'"
+		ssh ${_cluster} "cat '${_TO_ROOT}/$_DATASET/commit_hash'" </dev/null
 	fi
 }
 
@@ -173,7 +173,7 @@ then
 		grep "Task ID:" | cut -d":" -f2- | \
 		xargs globus task wait -H
 
-	ssh "${_TO}" "cd '${_TO_ROOT}/.in/' ; find -L '${_DATASET}'/ -type d -exec mkdir -p '../{}' \\; -o -type f -exec mv -T '{}' '../{}' \\;"
+	ssh "${_TO}" "cd '${_TO_ROOT}/.in/' ; find -L '${_DATASET}'/ -type d -exec mkdir -p '../{}' \\; -o -type f -exec mv -T '{}' '../{}' \\;" </dev/null
 fi
 
 popd
