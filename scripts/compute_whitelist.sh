@@ -10,8 +10,8 @@ set -o errexit -o pipefail
 
 mkdir -p ".$(basename $PWD)_sync_tree/.whitelist"
 
-# Average size / file should be of ~100MB
-AVG_SIZE=$((10**8))
+# Average size / file should be of ~200MB
+AVG_SIZE=$((200 * 10**6))
 FILES_CNT_THRESHOLD=100
 
 subdatasets --var | while read subds

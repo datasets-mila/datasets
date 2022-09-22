@@ -83,7 +83,7 @@ function _transfer_meta_file {
 	globus transfer --skip-activation-check \
 		--sync-level mtime \
 		--preserve-mtime \
-		--label "sync ${_DATASET//\// } $_file $(date -u +%C-%m-%d)" \
+		--label "sync ${_DATASET//[\/\.]/ } $_file $(date -u +%C-%m-%d)" \
 		--batch - \
 		"${_FROM_ID}:${_FROM_ROOT}/${_DATASET}" \
 		"${_TO_ID}:${_TO_ROOT}/.in/${_DATASET}"
@@ -159,7 +159,7 @@ then
 		--sync-level mtime \
 		--preserve-mtime \
 		--delete \
-		--label "sync ${_DATASET//\// }${_TASK_NAME} $(date -u +%C-%m-%d)" \
+		--label "sync ${_DATASET//[\/\.]/ }${_TASK_NAME} $(date -u +%C-%m-%d)" \
 		--batch - \
 		"${_FROM_ID}:${_FROM_ROOT}" "${_TO_ID}:${_TO_ROOT}/.in" | \
 		grep "Task ID:" | cut -d":" -f2- > ${_TASK_NAME}.transfer.task
