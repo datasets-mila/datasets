@@ -20,7 +20,7 @@ do
 	mkdir -p "${WL_DS}"
 	if [[ "$(cat "${WL_DS}/commit_hash")" != "$(git -C "${subds}" rev-parse HEAD)" ]]
 	then
-		find -L ${subds} \( -name ".*" -o -name "*.jugdata" -o -name "bin" \) -prune \
+		find -L ${subds} \( -name ".*" -o -name "*.jugdata" -o -name "bin" -o -name "wget_dir" \) -prune \
 			-o -type f -print0 \
 			| du -bclD --files0-from - \
 			> "${WL_DS}/du"
