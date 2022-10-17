@@ -294,3 +294,6 @@
 [submodule "restricted/recursionmilacausal_users/recursionmilacausal"]
 	path = restricted/recursionmilacausal_users/recursionmilacausal
 	url = ./restricted/recursionmilacausal_users/recursionmilacausal
+[submodule "imagenet21k"]
+	path = imagenet21k
+	url = ./imagenet21k
