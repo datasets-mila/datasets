@@ -297,3 +297,6 @@
 [submodule "imagenet21k"]
 	path = imagenet21k
 	url = ./imagenet21k
+[submodule "restricted/ego4d_users/ego4d"]
+	path = restricted/ego4d_users/ego4d
+	url = ./restricted/ego4d_users/ego4d
