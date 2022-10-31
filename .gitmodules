@@ -300,3 +300,6 @@
 [submodule "restricted/ego4d_users/ego4d"]
 	path = restricted/ego4d_users/ego4d
 	url = ./restricted/ego4d_users/ego4d
+[submodule "treemonitoring"]
+	path = treemonitoring
+	url = ./treemonitoring
