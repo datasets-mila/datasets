@@ -303,3 +303,6 @@
 [submodule "treemonitoring"]
 	path = treemonitoring
 	url = ./treemonitoring
+[submodule "voc2012"]
+	path = voc2012
+	url = ./voc2012
