@@ -306,3 +306,6 @@
 [submodule "voc2012"]
 	path = voc2012
 	url = ./voc2012
+[submodule "qm7x"]
+	path = qm7x
+	url = ./qm7x
