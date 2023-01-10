@@ -309,3 +309,6 @@
 [submodule "qm7x"]
 	path = qm7x
 	url = ./qm7x
+[submodule "parallelmeaningbank"]
+	path = parallelmeaningbank
+	url = ./parallelmeaningbank
