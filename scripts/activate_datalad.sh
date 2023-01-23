@@ -1,2 +1,2 @@
 #!/bin/bash
-source scripts/datalad.sh --version
+source scripts/datalad.sh --version >/dev/null
