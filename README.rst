@@ -56,5 +56,16 @@ Datasets Folders Structure
   | Contains datasets with restricted access, often because of license
     requirements
 
+Datasets which follow Digital Research Alliance of Canada's (DRAC) `good
+practices on data
+<https://docs.alliancecan.ca/wiki/AI_and_Machine_Learning#Managing_your_datasets>`_
+are mirrored to the Alliance clusters in
+``~/projects/rrg-bengioy-ad/data/curated/``. To list the local datasets on an
+Alliance cluster, you can execute the following command:
+
+.. prompt:: bash $
+
+   ssh [DRAC_CLUSTER_LOGIN] -C "projects/rrg-bengioy-ad/data/curated/list_datasets_cc.sh"
+
 Please refer to `<https://docs.mila.quebec/Information.html#datasets>`_ for
 more details on the datasets storage
