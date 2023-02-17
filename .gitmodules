@@ -312,3 +312,6 @@
 [submodule "parallelmeaningbank"]
 	path = parallelmeaningbank
 	url = ./parallelmeaningbank
+[submodule "pile"]
+	path = pile
+	url = ./pile
