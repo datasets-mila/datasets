@@ -321,3 +321,6 @@
 [submodule "pbmc"]
 	path = pbmc
 	url = ./pbmc
+[submodule "alphafoldv4-proteomes"]
+	path = alphafoldv4-proteomes
+	url = ./alphafoldv4-proteomes
