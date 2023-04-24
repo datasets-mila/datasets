@@ -324,3 +324,6 @@
 [submodule "alphafoldv4-proteomes"]
 	path = alphafoldv4-proteomes
 	url = ./alphafoldv4-proteomes
+[submodule "satlas"]
+	path = satlas
+	url = ./satlas
