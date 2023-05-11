@@ -327,3 +327,6 @@
 [submodule "satlas"]
 	path = satlas
 	url = ./satlas
+[submodule "rluatariordered"]
+	path = rluatariordered
+	url = ./rluatariordered
