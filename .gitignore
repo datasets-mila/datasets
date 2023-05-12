@@ -3,6 +3,8 @@
 /.datasets_sync_tree/
 /.tmp_processing/
 *.var/
+/huggingface/*
+!/huggingface/ln_hf_datasets.sh
 /parlai/*/*
 /[\.]tmp/
 /torchvision/*/*

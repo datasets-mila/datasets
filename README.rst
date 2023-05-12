@@ -37,6 +37,15 @@ Datasets Folders Structure
   | The script ``scripts/list_datasets.sh`` can be used to list all available
     datasets
 
+* | ``/huggingface``
+  | Contains Hugging Face ready datasets such as
+    ``datasets.load_dataset([...], cache_dir="/network/datasets/huggingface/datasets")``
+    would load the dataset if it is available.
+  | The script w/ arg ``scripts/list_datasets.sh --huggingface`` can be used to
+    list the available datasets
+  | Please have a look into the corresponding ``/huggingface/*_preprocess.py``
+    file to find the details of the Hugging Face dataset
+
 * | ``/parlai``
   | Contains ParlAI ready datasets
   | The script w/ arg ``scripts/list_datasets.sh --parlai`` can be used to

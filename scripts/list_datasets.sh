@@ -10,11 +10,12 @@ while [[ $# -gt 0 ]]
 do
 	_ARG="$1"; shift
 	case "${_ARG}" in
-		--parlai | --torchvision | --tensorflow)
+		--huggingface | --parlai | --torchvision | --tensorflow)
 		_PREPROCESS_DIR=${_ARG/--/}
 		;;
 		-h | --help)
 		>&2 echo "Options for $(basename "$0") are:"
+		>&2 echo "--huggingface list only Hugging Face ready datasets variants"
 		>&2 echo "--parlai list only ParlAI ready datasets variants"
 		>&2 echo "--torchvision list only Torchvision ready datasets variants"
 		>&2 echo "--tensorflow list only TensorFlow ready datasets variants"
@@ -33,7 +34,7 @@ set -o errexit -o pipefail -o noclobber
 
 if [[ ! -z "${_PREPROCESS_DIR}" ]]
 then
-	ls -l "${_DS_DIR}/${_PREPROCESS_DIR}/" | grep -oE "[^ ]*_${_PREPROCESS_DIR}" | grep -oE "[^\./].*" | sort -u
+	ls -l "${_DS_DIR}/${_PREPROCESS_DIR}/" | grep -oE "[^ ]*_${_PREPROCESS_DIR}/" | grep -oE "[^\./].*[^/]" | sort -u
 else
 	pushd ${_DS_DIR} >/dev/null
 	scripts/utils.sh subdatasets --var
