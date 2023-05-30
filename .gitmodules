@@ -330,3 +330,6 @@
 [submodule "rluatariordered"]
 	path = rluatariordered
 	url = ./rluatariordered
+[submodule "dqnreplay"]
+	path = dqnreplay
+	url = ./dqnreplay
