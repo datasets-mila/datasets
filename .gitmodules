@@ -333,3 +333,6 @@
 [submodule "dqnreplay"]
 	path = dqnreplay
 	url = ./dqnreplay
+[submodule "openproteinset"]
+	path = openproteinset
+	url = ./openproteinset
