@@ -2,6 +2,7 @@
 /.data1/
 /.datasets_sync_tree/
 /.tmp_processing/
+/.weights/
 *.var/
 /huggingface/*
 !/huggingface/ln_hf_datasets.sh
