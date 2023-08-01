@@ -336,3 +336,6 @@
 [submodule "openproteinset"]
 	path = openproteinset
 	url = ./openproteinset
+[submodule "movingmnist"]
+	path = movingmnist
+	url = ./movingmnist
