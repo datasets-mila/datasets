@@ -339,3 +339,6 @@
 [submodule "movingmnist"]
 	path = movingmnist
 	url = ./movingmnist
+[submodule "laion400m"]
+	path = laion400m
+	url = ./laion400m
