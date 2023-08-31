@@ -342,3 +342,6 @@
 [submodule "laion400m"]
 	path = laion400m
 	url = ./laion400m
+[submodule "vggface2"]
+	path = vggface2
+	url = ./vggface2
