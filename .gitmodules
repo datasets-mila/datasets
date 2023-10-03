@@ -351,3 +351,6 @@
 [submodule "facet"]
 	path = facet
 	url = ./facet
+[submodule "babyai"]
+	path = babyai
+	url = ./babyai
