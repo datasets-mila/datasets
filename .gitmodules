@@ -354,3 +354,6 @@
 [submodule "babyai"]
 	path = babyai
 	url = ./babyai
+[submodule "fmow"]
+	path = fmow
+	url = ./fmow
