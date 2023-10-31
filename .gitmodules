@@ -357,3 +357,6 @@
 [submodule "fmow"]
 	path = fmow
 	url = ./fmow
+[submodule "sherlockmoviematching"]
+	path = sherlockmoviematching
+	url = ./sherlockmoviematching
