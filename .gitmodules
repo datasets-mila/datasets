@@ -360,3 +360,6 @@
 [submodule "sherlockmoviematching"]
 	path = sherlockmoviematching
 	url = ./sherlockmoviematching
+[submodule "nocturne"]
+	path = nocturne
+	url = ./nocturne
