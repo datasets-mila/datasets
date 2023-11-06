@@ -363,3 +363,6 @@
 [submodule "nocturne"]
 	path = nocturne
 	url = ./nocturne
+[submodule "rapidai4eo"]
+	path = rapidai4eo
+	url = ./rapidai4eo
