@@ -366,3 +366,6 @@
 [submodule "rapidai4eo"]
 	path = rapidai4eo
 	url = ./rapidai4eo
+[submodule "bigearthnet"]
+	path = bigearthnet
+	url = ./bigearthnet
