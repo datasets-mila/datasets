@@ -369,3 +369,6 @@
 [submodule "bigearthnet"]
 	path = bigearthnet
 	url = ./bigearthnet
+[submodule "sen12ms"]
+	path = sen12ms
+	url = ./sen12ms
