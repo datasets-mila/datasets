@@ -372,3 +372,6 @@
 [submodule "sen12ms"]
 	path = sen12ms
 	url = ./sen12ms
+[submodule "flair"]
+	path = flair
+	url = ./flair
