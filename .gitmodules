@@ -375,3 +375,6 @@
 [submodule "flair"]
 	path = flair
 	url = ./flair
+[submodule "fivebillionpixels"]
+	path = fivebillionpixels
+	url = ./fivebillionpixels
