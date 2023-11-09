@@ -384,3 +384,6 @@
 [submodule "ssl4eol"]
 	path = ssl4eol
 	url = ./ssl4eol
+[submodule "ssl4eos12"]
+	path = ssl4eos12
+	url = ./ssl4eos12
