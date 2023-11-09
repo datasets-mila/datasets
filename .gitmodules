@@ -378,3 +378,6 @@
 [submodule "fivebillionpixels"]
 	path = fivebillionpixels
 	url = ./fivebillionpixels
+[submodule "yfcc15m"]
+	path = yfcc15m
+	url = ./yfcc15m
