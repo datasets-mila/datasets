@@ -381,3 +381,6 @@
 [submodule "yfcc15m"]
 	path = yfcc15m
 	url = ./yfcc15m
+[submodule "ssl4eol"]
+	path = ssl4eol
+	url = ./ssl4eol
