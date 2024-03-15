@@ -390,3 +390,6 @@
 [submodule "uniprot"]
 	path = uniprot
 	url = ./uniprot
+[submodule "uniref"]
+	path = uniref
+	url = ./uniref
