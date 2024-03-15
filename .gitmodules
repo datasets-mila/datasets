@@ -387,3 +387,6 @@
 [submodule "ssl4eos12"]
 	path = ssl4eos12
 	url = ./ssl4eos12
+[submodule "uniprot"]
+	path = uniprot
+	url = ./uniprot
