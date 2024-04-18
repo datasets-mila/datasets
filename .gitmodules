@@ -393,3 +393,6 @@
 [submodule "uniref"]
 	path = uniref
 	url = ./uniref
+[submodule "climateset"]
+	path = climateset
+	url = ./climateset
