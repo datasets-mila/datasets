@@ -396,3 +396,6 @@
 [submodule "climateset"]
 	path = climateset
 	url = ./climateset
+[submodule "lotsa-data"]
+	path = lotsa-data
+	url = ./lotsa-data
