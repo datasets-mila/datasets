@@ -399,3 +399,12 @@
 [submodule "lotsa-data"]
 	path = lotsa-data
 	url = ./lotsa-data
+[submodule "pointodyssey"]
+	path = pointodyssey
+	url = ./pointodyssey
+[submodule "bridge"]
+	path = bridge
+	url = ./bridge
+[submodule "openxembodiment"]
+	path = openxembodiment
+	url = ./openxembodiment
