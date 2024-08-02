@@ -408,3 +408,6 @@
 [submodule "openxembodiment"]
 	path = openxembodiment
 	url = ./openxembodiment
+[submodule "somethingsomething"]
+	path = somethingsomething
+	url = ./somethingsomething
