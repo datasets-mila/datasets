@@ -414,3 +414,6 @@
 [submodule "dolma"]
 	path = dolma
 	url = ./dolma
+[submodule "ratmotion"]
+	path = restricted/ratmotion_users/ratmotion
+	url = ./ratmotion
