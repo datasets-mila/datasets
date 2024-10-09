@@ -417,3 +417,6 @@
 [submodule "ratmotion"]
 	path = restricted/ratmotion_users/ratmotion
 	url = ./ratmotion
+[submodule "naturalscenes"]
+	path = naturalscenes
+	url = ./naturalscenes
