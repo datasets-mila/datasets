@@ -420,3 +420,6 @@
 [submodule "naturalscenes"]
 	path = naturalscenes
 	url = ./naturalscenes
+[submodule "olmo"]
+	path = olmo
+	url = ./olmo
