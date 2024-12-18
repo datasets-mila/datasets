@@ -415,11 +415,14 @@
 	path = dolma
 	url = ./dolma
 [submodule "ratmotion"]
-	path = ratmotion
-	url = ./ratmotion
+	path = restricted/ratmotion_users/ratmotion
+	url = ./restricted/ratmotion_users/ratmotion
 [submodule "naturalscenes"]
 	path = naturalscenes
 	url = ./naturalscenes
 [submodule "olmo"]
 	path = olmo
 	url = ./olmo
+[submodule "restricted/ratmotion_users/ratmotion_minimal"]
+	path = restricted/ratmotion_users/ratmotion_minimal
+	url = ./restricted/ratmotion_users/ratmotion_minimal
