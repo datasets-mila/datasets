@@ -424,5 +424,8 @@
 	path = olmo
 	url = ./olmo
 [submodule "restricted/ratmotion_users/ratmotion_minimal"]
-	path = restricted/ratmotion_users/ratmotion_minimal
+	path = restricted/ratmotion_users/ratmotionminimal
 	url = ./restricted/ratmotion_users/ratmotion_minimal
+[submodule "tapvid"]
+	path = tapvid
+	url = ./tapvid
