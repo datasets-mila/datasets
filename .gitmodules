@@ -429,3 +429,6 @@
 [submodule "tapvid"]
 	path = tapvid
 	url = ./tapvid
+[submodule "algoperf"]
+	path = algoperf
+	url = ./algoperf
