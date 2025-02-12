@@ -432,3 +432,6 @@
 [submodule "algoperf"]
 	path = algoperf
 	url = ./algoperf
+[submodule "nuplan"]
+	path = nuplan
+	url = ./nuplan
