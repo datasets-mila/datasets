@@ -435,3 +435,6 @@
 [submodule "nuplan"]
 	path = nuplan
 	url = ./nuplan
+[submodule "culturax"]
+	path = culturax
+	url = ./culturax
