@@ -438,3 +438,6 @@
 [submodule "culturax"]
 	path = culturax
 	url = ./culturax
+[submodule "olmoe-mix-0924"]
+	path = olmoe-mix-0924
+	url = ./olmoe-mix-0924
