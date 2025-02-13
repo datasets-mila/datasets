@@ -441,3 +441,6 @@
 [submodule "olmoe-mix-0924"]
 	path = olmoe-mix-0924
 	url = ./olmoe-mix-0924
+[submodule "olmoe"]
+	path = olmoe
+	url = ./olmoe
