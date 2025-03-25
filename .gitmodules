@@ -445,5 +445,8 @@
 	path = olmoe
 	url = ./olmoe
 [submodule "dynamicstereo"]
-	path = dynamicstereo
+	path = dynamicreplica
 	url = ./dynamicstereo
+[submodule "ariadigitaltwin"]
+	path = ariadigitaltwin
+	url = ./ariadigitaltwin
