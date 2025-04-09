@@ -450,3 +450,6 @@
 [submodule "ariadigitaltwin"]
 	path = ariadigitaltwin
 	url = ./ariadigitaltwin
+[submodule "pascal3d+"]
+	path = pascal3d+
+	url = ./pascal3d+
