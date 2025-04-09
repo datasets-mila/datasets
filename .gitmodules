@@ -453,3 +453,6 @@
 [submodule "pascal3d+"]
 	path = pascal3d+
 	url = ./pascal3d+
+[submodule "objectnet3D"]
+	path = objectnet3D
+	url = ./objectnet3D
