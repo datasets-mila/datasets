@@ -18,7 +18,7 @@
 	path = cifar10
 	url = ./cifar10
 	ignore = dirty
-[submodule "scannet"]
+[submodule "restricted/scannet_users/scannet"]
 	path = restricted/scannet_users/scannet
 	url = ./restricted/scannet_users/scannet
 	ignore = dirty
@@ -78,11 +78,11 @@
 	path = nwm
 	url = ./nwm
 	ignore = dirty
-[submodule "voxceleb/voxceleb1"]
+[submodule "restricted/voxceleb_users/voxceleb/voxceleb1"]
 	path = restricted/voxceleb_users/voxceleb/voxceleb1
 	url = ./restricted/voxceleb_users/voxceleb/voxceleb1
 	ignore = dirty
-[submodule "voxceleb/voxceleb2"]
+[submodule "restricted/voxceleb_users/voxceleb/voxceleb2"]
 	path = restricted/voxceleb_users/voxceleb/voxceleb2
 	url = ./restricted/voxceleb_users/voxceleb/voxceleb2
 	ignore = dirty
@@ -120,7 +120,7 @@
 [submodule "open_images"]
 	path = open_images
 	url = ./open_images
-[submodule "chime5"]
+[submodule "restricted/chime5_users/chime5"]
 	path = restricted/chime5_users/chime5
 	url = ./restricted/chime5_users/chime5
 [submodule "playing_for_data"]
@@ -153,7 +153,7 @@
 [submodule "climatenet"]
 	path = climatenet
 	url = ./climatenet
-[submodule "third_dihard_challenge"]
+[submodule "restricted/thirddihard_users/third_dihard_challenge"]
 	path = restricted/thirddihard_users/third_dihard_challenge
 	url = ./restricted/thirddihard_users/third_dihard_challenge
 [submodule "ffhq"]
@@ -414,7 +414,7 @@
 [submodule "dolma"]
 	path = dolma
 	url = ./dolma
-[submodule "ratmotion"]
+[submodule "restricted/ratmotion_users/ratmotion"]
 	path = restricted/ratmotion_users/ratmotion
 	url = ./restricted/ratmotion_users/ratmotion
 [submodule "naturalscenes"]
@@ -454,5 +454,11 @@
 	path = pascal3d+
 	url = ./pascal3d+
 [submodule "objectnet3D"]
-	path = objectnet3D
+	path = objectnet3d
 	url = ./objectnet3D
+# [submodule "restricted/icmlexvo2022_users/humeexvo"]
+# 	path = restricted/icmlexvo2022_users/humeexvo
+# 	url = ./restricted/icmlexvo2022_users/humeexvo
+[submodule "restricted/icmlexvo2022_users/humeexvo"]
+	path = restricted/icmlexvo2022_users/humeexvo
+	url = ./restricted/icmlexvo2022_users/humeexvo
